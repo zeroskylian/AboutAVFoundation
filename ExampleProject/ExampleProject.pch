@@ -1,0 +1,25 @@
+//
+//  ExampleProject.pch
+//  ExampleProject
+//
+//  Created by 廉鑫博 on 2017/8/28.
+//  Copyright © 2017年 廉鑫博. All rights reserved.
+//
+
+#ifndef ExampleProject_pch
+#define ExampleProject_pch
+
+
+#define kScreenBounds [UIScreen mainScreen].bounds
+#define kScreenWidth kScreenBounds.size.width
+#define kScreenHeight kScreenBounds.size.height
+#define WEAKSELF typeof(self) __weak weakSelf = self;
+#define STRONGSELF typeof(weakSelf) __strong strongSelf = weakSelf;
+
+#ifdef DEBUG
+# define ZLog(format, ...) NSLog((@"[文件名:%s]\n" "[函数名:%s]\n" "[行号:%d] \n" format), __FILE__, __FUNCTION__, __LINE__, ##__VA_ARGS__)
+#else
+# define ZLog(...);
+#endif
+
+#endif /* ExampleProject_pch */
